@@ -1,0 +1,280 @@
+@import  url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.background {
+
+    background-color: lightgray;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.cabeçalho-link {
+    display: flex;
+    gap: 3rem;
+    cursor: pointer;
+}
+
+
+.logo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    background: transparent;
+    cursor: pointer;
+    color: black;
+    font-weight:bolder;
+}
+
+.background2 {
+    background-color: lightgray;
+}
+
+.Estúdio {
+    font-size: 10vh;
+    margin-left: 0.950em;
+    
+}
+
+.Utilizamos {
+    font-size: 1.25em;
+    margin-left: 3em;
+    margin-right: 30px;
+}
+.container {
+    text-align: center;
+}
+button {
+    color:#ffffff;
+    background: #474747;
+    border:solid 1px #474747;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5.5px;
+    display: inline-block;
+    font-size: 2em;
+}
+
+.seta{
+    font-size: 3.075em;
+    padding: 0 0 0 1.5em;
+    margin-bottom: 1em;
+}
+
+.btn2{
+    padding: 1% 2%;
+    margin-bottom: 3%;
+    font-size: 1.375em ;
+    cursor: pointer;
+}
+
+.btn2:hover {
+    color: black;
+    background-color: #ffffff;
+}
+
+.portifolio {
+    background-color: black;
+    max-width: 100%;
+    border-left:0cap;
+    padding-left: 0%;
+
+}
+
+.port-thumb {
+    display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            padding: 15px 10px 40px 15px;
+}
+
+.port-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.conteudo {
+    overflow: auto;
+}
+
+.texto {
+    float: left;
+    width: 50%;
+}
+
+.wilson {
+    float: right;
+    width: 50%;
+}
+.texto p {
+    color: #888888;
+    padding: 3% 0 2% 6%;
+    font-size: 2em; /* Exemplo de unidade relativa */
+}
+
+.texto h3 {
+    color: #cecdcd;
+    padding-left: 2%;
+    font-size: 3.5vw; /* Unidade relativa para larguras de tela */
+    padding-left: 6%;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .texto p {
+        font-size: 1.5em;
+    }
+
+    .texto h3 {
+        font-size: 4vw;
+    }
+
+    .processo-criativo{
+        font-size: 5vw;
+    }
+
+    .desenvolvemos {
+        font-size: 2vw;
+    }
+
+}
+
+.sublinhado {
+    text-decoration: underline;
+}
+
+.btn3:hover{
+    color:#ffffff;
+    background: #474747;
+}
+
+.btn3{
+    color: black;
+    background-color: #ffffff;
+    margin: 18% 0 0 6%;
+    padding: 1% 2%;
+    font-size: 1.675em ;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+}
+
+.processo-criativo {
+    background-color: lightgray;
+    padding: 5% 6% 0 2.5% ;
+    font-size: 5vw;
+}
+
+.desenvolvemos {
+    font-size: 20px;
+}
+
+
+/* Media Query para telas menores, por exemplo, telas de até 768 pixels de largura */
+@media (max-width: 768px) {
+    .work-mode { 
+        align-items: center; /* Centraliza os itens na coluna */
+    }
+
+    .work-mode img {
+        width: 50%; /* Ajusta a largura das imagens para 50% do contêiner em telas menores */
+    }
+}
+.work-mode {
+    background-color: lightgrey;
+    display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+    max-width: 100%; /* Ajusta a largura das imagens para caber na tela inteira */
+    padding: 1.5em 0 1.5em 1em;
+    gap: 1em; /* Adiciona um espaço entre as imagens */
+
+}
+
+.work-mode img {
+    padding-left: 2vh;
+    justify-content: center;
+}
+
+.work-mode p {
+    width: 3.5rem; /* Largura para as descrições */
+    text-align: center; /* Centraliza o texto */
+    font-size: 0.37em; /* Define o tamanho da fonte */
+    font-weight: bolder;
+    padding: 0.1875em 0 0 0.8125;
+    margin-left: 0.1875em;
+}
+.rodapé{
+    overflow: auto;
+    background-color: black;
+    position: relative;
+}
+
+.proposta{
+    padding: 10% 0 10% 5%;
+color: #ffffff;
+    float: left;
+    font-size: 2vh;
+    width: 50%;
+}
+
+.preencha{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    clear: both;  /* limpa a flutuação */
+}
+
+.btn4 {
+    color: black;
+    background-color: #ffffff;
+}
+
+.btn4:hover{
+    color: #ffffff;
+    background-color: #474747;
+
+}
+
+.smartphone {
+    float: right;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.social-media {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 2em;
+    text-align: center;
+    margin: 10px; /* Adiciona margem para dar espaço aos ícones */
+    gap: 1em;
+}
+
+.social-media a{
+    margin: 0 0.5208333333333310vh;
+}
+
+
+
+
+
