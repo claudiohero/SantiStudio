@@ -91,7 +91,11 @@ button {
     display: inline-block;
     font-size: 2em;
 }
-
+@media screen and (max-width: 600px){
+    .seta{
+        padding-left: 2vh !important;
+    }
+}
 .seta{
     font-size: 3.075em;
     padding: 0 0 0 1.5em;
@@ -99,7 +103,7 @@ button {
 }
 @media screen and (max-width: 600px) {
     .btn2{
-        font-size: 1em !important;
+        font-size: 0.7em !important;
         margin-bottom: 2em !important;
     }
 
@@ -123,7 +127,12 @@ button {
     padding-left: 0%;
 
 }
-
+@media screen and (max-width: 600px) {
+    .port-thumb{
+        padding-bottom: 2vh !important;
+    }
+    
+}
 .port-thumb {
     display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -276,6 +285,7 @@ button {
 @media screen and (max-width: 600px){
     .preencha{
         font-size: 0.7em;
+        padding-bottom: 0.5em !important;
     }
    .proposta{
          padding: 0;
@@ -305,12 +315,31 @@ color: #ffffff;
     background-color: #474747;
 
 }
-
+@media screen and (max-width: 600px) {
+    .smartphone{
+        margin-top: 7.2vh;
+    }
+    }
 .smartphone {
     float: right;
     width: 50%;
     max-width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .social-media {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        text-align: left !important; /* Alinhar o texto à esquerda */
+        margin: 10px !important; /* Adicionar margem para dar espaço aos ícones */
+        gap: 1em !important;
+    }
+
+    .social-media a {
+        margin: 0 0.5208333333333310vh !important;
+    }
 }
 
 .social-media {
