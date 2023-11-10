@@ -11,14 +11,10 @@
 
 body {
     background-color: rgb(0, 0, 0);
+
 }
 
-@media screen and (max-width: 768px) {
-    body{
-        width: 100%;
-        flex-direction: column;
-    }
-}
+
 .background {
 
     background-color: lightgray;
@@ -32,7 +28,11 @@ header {
     text-align: center;
     padding-top: 1rem;
 }
-
+@media (max-width: 600px){
+    .cabeçalho-link{
+        gap: 2vh !important;
+    }
+}
 .cabeçalho-link {
     display: flex;
     gap: 3rem;
@@ -42,7 +42,7 @@ header {
 
 .logo {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 1.875em;
     background: transparent;
     cursor: pointer;
     color: black;
@@ -51,6 +51,21 @@ header {
 
 .background2 {
     background-color: lightgray;
+}
+/* Media Query para telas menores, de até 600 pixels de largura */
+@media (max-width: 600px) {
+    .Estúdio {
+        font-size: 9vw !important; /* Ajuste o tamanho da fonte conforme necessário */
+        margin-left: 0.5em; /* Adapte a margem conforme necessário */
+        
+    }
+
+    .Utilizamos {
+        font-size: 1em !important; /* Ajuste o tamanho da fonte conforme necessário */
+        margin-left: 5.5vh !important; /* Remova a margem à esquerda se necessário */
+        margin-right: 0; /* Remova a margem à direita se necessário */
+    }
+    
 }
 
 .Estúdio {
@@ -82,7 +97,13 @@ button {
     padding: 0 0 0 1.5em;
     margin-bottom: 1em;
 }
+@media screen and (max-width: 600px) {
+    .btn2{
+        font-size: 1em !important;
+        margin-bottom: 2em !important;
+    }
 
+}    
 .btn2{
     padding: 1% 2%;
     margin-bottom: 3%;
@@ -145,9 +166,9 @@ button {
 }
 
 /* Media Query para telas menores */
-@media (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .texto p {
-        font-size: 1.5em;
+        font-size: 0.7em;
     }
 
     .texto h3 {
@@ -156,12 +177,14 @@ button {
 
     .processo-criativo{
         font-size: 5vw;
+    
     }
 
     .desenvolvemos {
         font-size: 2vw;
     }
 
+   
 }
 
 .sublinhado {
@@ -173,15 +196,29 @@ button {
     background: #474747;
 }
 
+
 .btn3{
     color: black;
     background-color: #ffffff;
     margin: 18% 0 0 6%;
-    padding: 1% 2%;
+    padding: 2% 2%;
     font-size: 1.675em ;
     cursor: pointer;
     font-family: Verdana, sans-serif;
 }
+
+
+@media screen and (max-width: 600px) {
+    .btn3 {
+        margin-left: 1em !important; /* Adicione !important para garantir que esta regra prevaleça */
+        padding-left: 1em;
+        width: 50%; /* Define a largura para 100% da largura do contêiner pai */
+        margin-top: 18%;
+        font-size: 1.5vh;
+    }
+}
+
+
 
 .processo-criativo {
     background-color: lightgray;
@@ -195,7 +232,7 @@ button {
 
 
 /* Media Query para telas menores, por exemplo, telas de até 768 pixels de largura */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .work-mode { 
         align-items: center; /* Centraliza os itens na coluna */
     }
@@ -203,7 +240,10 @@ button {
     .work-mode img {
         width: 50%; /* Ajusta a largura das imagens para 50% do contêiner em telas menores */
     }
+    
 }
+
+
 .work-mode {
     background-color: lightgrey;
     display: grid;
@@ -233,7 +273,14 @@ button {
     background-color: black;
     position: relative;
 }
-
+@media screen and (max-width: 600px){
+    .preencha{
+        font-size: 0.7em;
+    }
+   .proposta{
+         padding: 0;
+   }
+}
 .proposta{
     padding: 10% 0 10% 5%;
 color: #ffffff;
@@ -278,6 +325,16 @@ color: #ffffff;
 
 .social-media a{
     margin: 0 0.5208333333333310vh;
+}
+
+/* Media Query para telas menores, por exemplo, telas de até 600 pixels de largura */
+@media (max-width: 600px) {
+    .btn3,
+    .btn4 {
+        width: 50%; /* Define a largura para 100% da largura do contêiner pai */
+        margin-left:0; /* Remove a margem à esquerda para ocupar toda a largura */
+        font-size: 1.5vh;
+    }
 }
 
 
