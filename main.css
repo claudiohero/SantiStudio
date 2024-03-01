@@ -1,4 +1,24 @@
-@import  url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: neueHaas-light;
+    src: url(Font/NeueHaasDisplayLight.ttf);
+  }
+
+  @font-face {
+    font-family: neueHaas-bold;
+    src: url(Font/NeueHaasDisplayBold.ttf);
+  }
+
+  @font-face {
+    font-family: neueHaas-mediu;
+    src: url(Font/NeueHaasDisplayMediu.ttf);
+  }
+
+  @font-face {
+    font-family: neueHaas-thin;
+    src: url(Font/NeueHaasDisplayThin.ttf);
+  }
+  
+  
 
 *{
     margin: 0;
@@ -6,7 +26,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -22,31 +41,49 @@ body {
 
 header {
     display: flex;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     max-width: 100%;
-    align-items: center;
-    text-align: center;
+    /*align-items: center;*/
+    /*text-align: center;*/
     padding-top: 1rem;
+}
+
+.registrado{
+    font-size: 4vh;
 }
 @media (max-width: 600px){
     .cabeçalho-link{
         gap: 2vh !important;
     }
+
+    .cabeçalho-link img{
+        width: 3vh;
+    }
 }
 .cabeçalho-link {
     display: flex;
-    gap: 3rem;
-    cursor: pointer;
+    gap: 1rem;
+    /*padding-left: 87vh;*/
+    margin-right: 1vh;
+    margin-left: auto;
+    padding-top: 1vh;
 }
 
-
+@media (max-width: 600px){
+    .logo{
+        font-size: 3.5vh !important;
+        margin-left: auto !important;
+        padding-left: 2vh !important;
+    }
+}
 .logo {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: neueHaas-light;
     font-size: 1.875em;
     background: transparent;
     cursor: pointer;
     color: black;
     font-weight:bolder;
+    padding-left: 5.5vh;
 }
 
 .background2 {
@@ -54,33 +91,60 @@ header {
 }
 /* Media Query para telas menores, de até 600 pixels de largura */
 @media (max-width: 600px) {
-    .Estúdio {
-        font-size: 9vw !important; /* Ajuste o tamanho da fonte conforme necessário */
-        margin-left: 0.5em; /* Adapte a margem conforme necessário */
-        
+    
+    .Estúdio h2{
+        font-size: 4.5vh !important; /* Ajuste o tamanho da fonte conforme necessário */
+        font-weight: bold !important;
+        margin-left: 2vh !important;
     }
 
-    .Utilizamos {
-        font-size: 1em !important; /* Ajuste o tamanho da fonte conforme necessário */
-        margin-left: 5.5vh !important; /* Remova a margem à esquerda se necessário */
-        margin-right: 0; /* Remova a margem à direita se necessário */
+    .Estúdio p {
+        font-size: 1.5vh !important; /* Ajuste o tamanho da fonte conforme necessário */
+        margin-left: 2vh !important;
+        margin-right: 2vh !important;
     }
+
     
 }
-
-.Estúdio {
+.Estúdio-reveal{
+    visibility: hidden;
+}
+.Estúdio h2 {
+    margin-left: 5vh;
     font-size: 10vh;
-    margin-left: 0.950em;
-    
+    font-family: neueHaas-light;
+    padding-top: 10vh;
 }
 
-.Utilizamos {
-    font-size: 1.25em;
-    margin-left: 3em;
-    margin-right: 30px;
+.Estúdio p {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    font-size: 3.5vh;
+    margin-left: 5vh;
+    font-family: neueHaas-light;
 }
+.Estúdio h3 {
+   padding-bottom: 9vh;
+}
+
 .container {
+    position: relative;
+    overflow: hidden;
     text-align: center;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background-color:#474747;
+    z-index: 1;
+    padding-bottom: 0.2em;
+    margin-bottom: 4.4em;
 }
 button {
     color:#ffffff;
@@ -92,14 +156,17 @@ button {
     font-size: 2em;
 }
 @media screen and (max-width: 600px){
-    .seta{
-        padding-left: 2vh !important;
-    }
+   .seta{
+    font-size: 5vh !important;
+   }
 }
 .seta{
+    font-weight: bold;
     font-size: 3.075em;
-    padding: 0 0 0 1.5em;
-    margin-bottom: 1em;
+    margin-left: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+   
 }
 @media screen and (max-width: 600px) {
     .btn2{
@@ -109,10 +176,16 @@ button {
 
 }    
 .btn2{
+
+    position: relative;
     padding: 1% 2%;
-    margin-bottom: 3%;
-    font-size: 1.375em ;
+    margin-bottom: 3em;
+    font-size: 1.075em ;
+    font-family: neueHaas-mediu;
+    font-weight: bold;
     cursor: pointer;
+    z-index: 2;
+   
 }
 
 .btn2:hover {
@@ -125,17 +198,21 @@ button {
     max-width: 100%;
     border-left:0cap;
     padding-left: 0%;
+}
 
+.port-thumb-reveal, .thumb1, .thumb2, .thumb3, .thumb4, .thumb5, .thumb6, .thumb7, .thumb8, .thumb9, .thumb10, .thumb11, .thumb12{
+    visibility: hidden;
 }
 @media screen and (max-width: 600px) {
     .port-thumb{
         padding-bottom: 2vh !important;
+        grid-template-columns: repeat(2, 1fr)!important;
     }
     
 }
 .port-thumb {
     display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 5px;
             padding: 15px 10px 40px 15px;
 }
@@ -148,50 +225,66 @@ button {
     cursor: pointer;
 }
 
+.bg-wilson-reveal{
+    visibility: hidden;
+}
+
+.bg-wilson{
+    background-image: url(https://i.imgur.com/yu1ZFLY.jpg);
+    background-size: cover; /* cobre todo o espaço disponível na tag */
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
 .conteudo {
     overflow: auto;
+    padding-bottom: 6em;
 }
 
 .texto {
     float: left;
-    width: 50%;
+    width: 70%;
+    padding-left: 6%;
+    padding-top: 4.5em;
+    
 }
 
-.wilson {
-    float: right;
-    width: 50%;
-}
 .texto p {
-    color: #888888;
-    padding: 3% 0 2% 6%;
-    font-size: 2em; /* Exemplo de unidade relativa */
+    font-family: neueHaas-light;
+    color: #ffffff;
+    padding: 1% 0 1% 0%;
+    font-size: 3.5vh; /* Exemplo de unidade relativa */
+    background-color: rgba(0, 0, 0, 0.801); /* Cor de fundo com opacidade */
+    border-radius: 0.5em; /* Borda arredondada, ajuste conforme necessário */
+    margin-top: 1em;
+    max-width: 100%;
+
 }
 
 .texto h3 {
+    font-family: neueHaas-light;
+    padding-top: 1em;
     color: #cecdcd;
-    padding-left: 2%;
-    font-size: 3.5vw; /* Unidade relativa para larguras de tela */
-    padding-left: 6%;
+    font-size: 7vh; /* Unidade relativa para larguras de tela */
+    
 }
 
 /* Media Query para telas menores */
 @media screen and (max-width: 600px) {
     .texto p {
-        font-size: 0.7em;
+        font-size: 1.5vh !important;
     }
 
-    .texto h3 {
-        font-size: 4vw;
+    .texto h3{
+        font-size: 2vh !important;
     }
 
     .processo-criativo{
-        font-size: 5vw;
+        font-size: 6vw;
     
     }
 
-    .desenvolvemos {
-        font-size: 2vw;
-    }
 
    
 }
@@ -205,68 +298,112 @@ button {
     background: #474747;
 }
 
-
+.btn3-reveal{
+    visibility: hidden;
+}
 .btn3{
+    font-family: neueHaas-light;
     color: black;
     background-color: #ffffff;
-    margin: 18% 0 0 6%;
-    padding: 2% 2%;
-    font-size: 1.675em ;
+    margin: 18% 0 0 0%;
+    padding: 1.5% 5%;
+    font-size: 4vh ;
     cursor: pointer;
     font-family: Verdana, sans-serif;
+    border-radius: 0.4em;
+
 }
 
 
 @media screen and (max-width: 600px) {
     .btn3 {
-        margin-left: 1em !important; /* Adicione !important para garantir que esta regra prevaleça */
         padding-left: 1em;
         width: 50%; /* Define a largura para 100% da largura do contêiner pai */
         margin-top: 18%;
         font-size: 1.5vh;
     }
 }
+@media (max-width: 600px){
+    
+    .texto-p{
+        font-size: 1vh !important;
+    }
+}
 
+@media (max-width: 600px){
+    .processo-criativo1 img{
+        content: url(https://i.imgur.com/PotTKMe.png); /* barras pretas do modo de trabalho abaixo dos ícones de composição */
+        padding: 1vh 0 2vh 0 !important;
+    }
+}
+.processo-criativo1 img {
+    margin-top: 1vh;
+    padding: 6vh 6vh;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 600px) {
+    .processo-criativo{
+        padding-top: 5vh !important;
+    }
+    .processo-criativo h2 {
+        font-size: 6vh !important;
+    }
+    
+}
+.processo-criativo1-reveal{
+    visibility: hidden;
+}
 
+.processo-criativo-reveal{
+    visibility: hidden;
+}
 
 .processo-criativo {
+    font-family: neueHaas-light;
     background-color: lightgray;
-    padding: 5% 6% 0 2.5% ;
+    padding: 0% 6% 0 6% ;
     font-size: 5vw;
 }
 
-.desenvolvemos {
-    font-size: 20px;
+@media screen and (max-width: 600px) {
+    .processo-criativo p {
+        font-size: 1.9vh !important;
+        padding-bottom: 1vh !important;
+        margin-right: 5vh !important;
+    }
+    
+}
+.processo-criativo p {
+    font-family: neueHaas-light;
+    font-size: 3.1vh;
 }
 
+.work-mode-reveal{
+    visibility: hidden;
+}
 
-/* Media Query para telas menores, por exemplo, telas de até 768 pixels de largura */
-@media (max-width: 600px) {
-    .work-mode { 
-        align-items: center; /* Centraliza os itens na coluna */
+.work-mode {
+    padding: 2vh 0 4vh 0;
+    background-color: lightgrey;
+}
+
+@media screen and (max-width: 600px) {
+    .work-mode{
+        padding: 0;
     }
-
     .work-mode img {
-        width: 50%; /* Ajusta a largura das imagens para 50% do contêiner em telas menores */
+     content: url(https://i.imgur.com/eUMeDJk.png); /* imagens dos icones de composição de trabalho */
+     padding: 4vh 0 1vh 0 !important;
     }
     
 }
 
-
-.work-mode {
-    background-color: lightgrey;
-    display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 5px;
-    max-width: 100%; /* Ajusta a largura das imagens para caber na tela inteira */
-    padding: 1.5em 0 1.5em 1em;
-    gap: 1em; /* Adiciona um espaço entre as imagens */
-
-}
-
 .work-mode img {
-    padding-left: 2vh;
+    padding: 2vh 0 4vh 0;
     justify-content: center;
+    width: 100%;
 }
 
 .work-mode p {
@@ -284,30 +421,74 @@ button {
 }
 @media screen and (max-width: 600px){
     .preencha{
-        font-size: 0.7em;
-        padding-bottom: 0.5em !important;
+        font-size: 1.5vh;
+        padding: 1vh 3vh 0 3vh !important;
+        width: 100% !important;
     }
    .proposta{
-         padding: 0;
+         width: 100% !important;
+         text-align: center !important;
+         padding: 5vh 0 1vh 0 !important;
+         float: none !important;   
    }
 }
+.proposta-reveal{
+    visibility: hidden;
+}
+
+.preencha-reveal{
+    visibility: hidden;
+}
 .proposta{
+    font-family: neueHaas-light;
     padding: 10% 0 10% 5%;
-color: #ffffff;
+    color: #ffffff;
     float: left;
-    font-size: 2vh;
+    font-size: 3vh;
     width: 50%;
+}
+
+.proposta h1 {
+    font-size: 11.5vh;
+}
+
+@media screen and (max-width: 600px){
+    .proposta h1 {
+        font-size: 7.5vh !important;
+    }
+
+    .proposta p {
+        font-size: 1.6vh !important;
+    }
 }
 
 .preencha{
     padding-top: 10%;
-    padding-bottom: 10%;
     clear: both;  /* limpa a flutuação */
+    font-size: 2.5vh;
 }
 
+
+@media screen and (max-width: 600px){
+    .btn4{
+        font-size: 2.2vh !important;
+        margin-top: 2vh !important;
+    }
+}
+
+.btn4-reveal{
+    visibility: hidden;
+}
 .btn4 {
+    font-family: neueHaas-light;
     color: black;
     background-color: #ffffff;
+    margin: 18% 0 0 0%;
+    padding: 1.5% 4%;
+    font-size: 1.675em ;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+    border-radius: 0.4em;
 }
 
 .btn4:hover{
@@ -315,12 +496,24 @@ color: #ffffff;
     background-color: #474747;
 
 }
+
+
 @media screen and (max-width: 600px) {
     .smartphone{
-        margin-top: 7.2vh;
+        position: relative !important;
+        text-align: center !important;
+
+    }
+    .smartphone img{
+      float: none !important;
+       max-width: 100% !important;
+       width: 80% !important;
+       padding-top: 1vh !important;
+       bottom: 0 !important;
     }
     }
-.smartphone {
+
+.smartphone img{
     float: right;
     width: 50%;
     max-width: 100%;
@@ -329,19 +522,19 @@ color: #ffffff;
 
 @media screen and (max-width: 600px) {
     .social-media {
-        position: absolute !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        text-align: left !important; /* Alinhar o texto à esquerda */
+        font-size: 2.5vh !important;
+        text-align: center !important; /* Alinhar o texto à esquerda */
         margin: 10px !important; /* Adicionar margem para dar espaço aos ícones */
-        gap: 1em !important;
+        gap: 2vh !important;
+        position: relative !important;
+        left: 0 !important;
     }
 
-    .social-media a {
-        margin: 0 0.5208333333333310vh !important;
-    }
+
 }
-
+.social-media-reveal{
+    visibility: hidden;
+}
 .social-media {
     color: #ffffff;
     position: absolute;
@@ -350,21 +543,19 @@ color: #ffffff;
     text-align: center;
     margin: 10px; /* Adiciona margem para dar espaço aos ícones */
     gap: 1em;
+    font-size: 3vh;
 }
 
 .social-media a{
     margin: 0 0.5208333333333310vh;
 }
 
-/* Media Query para telas menores, por exemplo, telas de até 600 pixels de largura */
-@media (max-width: 600px) {
-    .btn3,
-    .btn4 {
-        width: 50%; /* Define a largura para 100% da largura do contêiner pai */
-        margin-left:0; /* Remove a margem à esquerda para ocupar toda a largura */
-        font-size: 1.5vh;
-    }
+.social-media img{
+    width: 100%;
+
 }
+
+
 
 
 
